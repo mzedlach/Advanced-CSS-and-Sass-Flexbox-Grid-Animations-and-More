@@ -6,3 +6,23 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box: 
+}
+
+body {
+    font-fmaiy: "Lato", sans serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear gradient 
+    
+}
