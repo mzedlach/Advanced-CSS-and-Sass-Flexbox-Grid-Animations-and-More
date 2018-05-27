@@ -10,19 +10,27 @@ Dark green: #28b485
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box: 
+    box-sizing: border-box;
 }
 
 body {
-    font-fmaiy: "Lato", sans serif;
+    font-family: "Lato", sans serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 30px;
 }
 
 .header{
     height: 95vh;
-    background-image: linear gradient 
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 131, 0.8)), 
+         url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /* Makes sure that top of the image will always stay at the top of the div. Center will keep the center of the image always in teh centre. Top and bottom will be cup off with resize. */
+    clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%); /* Make cool cut of header image */
     
 }
