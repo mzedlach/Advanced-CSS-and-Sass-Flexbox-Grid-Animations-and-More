@@ -87,11 +87,9 @@ body {
         opacity: 0;
         transform: translateX(-100px);
     }
-
     80% {
         transform: translatex(10px);
     }
-
     100% {
         opacity: 1;
         transform: translate(0);
@@ -102,11 +100,19 @@ body {
         opacity: 0;
         transform: translateX(100px);
     }
-
     80% {
         transform: translatex(-10px);
     }
-
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     100% {
         opacity: 1;
         transform: translate(0);
@@ -122,6 +128,7 @@ body {
     border-radius: 100px;
     /* Transition property has to be in the initial state */
     transition: all .2s;
+    position: relative;
 }
 .btn:hover {
     transform: translateY(-3px);
@@ -136,5 +143,29 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
-
+}
+.btn::after {
+    /* Have to specify content and display */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    /* To place this pseudoelement right behind the button */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btn-white::after {
+    background-color: #fff;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated {
+    animation: moveInBottom .5s ease-out 0.75s;
+    animation-fill-mode: backwards;
 }
