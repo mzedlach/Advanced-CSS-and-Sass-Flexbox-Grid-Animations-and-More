@@ -1,17 +1,12 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+body {
+    font-family: "Lato", sans serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
-
-@import "components/button";
-
-@import "layout/header";
-
-@import "pages/home";
+    box-sizing: border-box;
+}
 
 .heading-primary {
     color: $color-white;
@@ -42,7 +37,3 @@
         animation: moveInRight 1s ease-out;
     }
 } 
-
-
-
-

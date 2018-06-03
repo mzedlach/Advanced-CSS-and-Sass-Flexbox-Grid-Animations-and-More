@@ -1,0 +1,30 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)), 
+         url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /* Makes sure that top of the image will always stay at the top of the div. Center will keep the center of the image always in teh centre. Top and bottom will be cup off with resize. */
+    position:relative;
+
+    clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%); /* Make cool cut of header image */
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+    &__text-box {
+        /* To center element and it be responsive */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
