@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     //To center a block element within another block element
     margin: 0 auto;
 
@@ -15,11 +14,10 @@
     // * would be used to select those that 'contain'
     // $ is for 'ends with'
     [class^="col-"] {
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {
-            margin-right: $hutter-horizontal;
+            margin-right: $gutter-horizontal;
         }
     }
 

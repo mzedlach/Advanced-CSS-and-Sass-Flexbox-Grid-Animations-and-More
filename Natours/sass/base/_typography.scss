@@ -37,3 +37,21 @@ body {
         animation: moveInRight 1s ease-out;
     }
 } 
+.heading-secondary {
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    // To give a gradient to letters. Make letters tehmselves transparent
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}

@@ -2,14 +2,14 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/base";
 @import "base/animations";
+@import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
 @import "components/button";
 
-@import "layout/grid";
-@import "layout/header";
+@import "layouts/grid";
+@import "layouts/header";
 
 @import "pages/home";
