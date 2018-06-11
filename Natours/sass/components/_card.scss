@@ -1,0 +1,48 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    // Have to add a height here as well becuase parent loses all of its 
+    // height because of the positioning. Losing the height also cuases 
+    // it to lose it's perspective
+    height: 50rem;
+
+    &__side {
+        background-color: orangered;
+        color:white;
+        font-size: 2rem;
+
+        height: 50rem;
+        transition: all .5s ease;   
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &-1 {
+                
+            }
+            &-1 {
+
+            }
+        }
+    }
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
