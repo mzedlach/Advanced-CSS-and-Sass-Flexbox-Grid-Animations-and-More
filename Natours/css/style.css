@@ -1,3 +1,16 @@
+/*
+0-600       Phone
+600-900     Tablet portrait 
+900-1200    Tablet landscape
+(1200-1800   Normal styles apply)
+1800 +      Big Dektop 
+ 
+$breakpoint argument choices:
+-phone 
+-tab-port
+-tab-land
+-big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -37,6 +50,15 @@ html {
   /* Setting HTML font to 62.5% allows user to zoon in and out while giving us the 10px base from 16px default */
   /* Later allows for easier use of rem - note: rem not compatible with ES9 */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
