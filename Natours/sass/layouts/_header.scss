@@ -9,8 +9,13 @@
     background-position: top; /* Makes sure that top of the image will always stay at the top of the div. Center will keep the center of the image always in teh centre. Top and bottom will be cup off with resize. */
     position:relative;
 
-    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%);
-    clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%); /* Make cool cut of header image */
+    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%); /* Make cool cut of header image */
+
+    @include respond(phone) { 
+        -webkit-clip-path: polygon( 0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon( 0 0, 100% 0, 100% 85vh, 0 100%); 
+    }
 
     &__logo-box {
         position: absolute;
