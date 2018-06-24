@@ -34,20 +34,43 @@
         transform: translate(-50%, -50%) scale(.25);
         //First allow grey background to come in adn then allow content to come in. 
         transition: all .4s .2s;
+
+        @include respond(tab-land) {
+            width: 95%;
+        }
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
     &__left {
         width: 33.3333333%;
         display: table-cell;
+        @include respond(phone) {
+            display: block;
+            width: 100%;
+        }
     }
+    
     &__right {
         width: 66.6666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+        @include respond(tab-port) {
+            padding: 1rem 1rem;
+        }
+        @include respond(phone) {
+            display: block;
+            width: 100%;    
+        }
     }
     &__img {
         display: block;
         width: 100%;
+        @include respond(phone) {
+            display: inline-block;
+            width: 49.7%;
+        }
     }
     &__text {
         font-size: 1.4rem;
@@ -65,6 +88,18 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tab-port) {
+            -moz-column-count: 1; 
+            -moz-column-gap: 1rem;
+            -moz-column-rule: none;
+            
+            column-count: 1; 
+            column-gap: 1rem;
+            column-rule: none;
+
+            margin-bottom: 2rem;
+        }
     }
 
 //For closing X at top right
