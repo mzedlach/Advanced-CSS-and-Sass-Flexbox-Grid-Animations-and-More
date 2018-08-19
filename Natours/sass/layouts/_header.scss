@@ -4,7 +4,7 @@
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)), 
-         url(../img/hero.jpg);
+         url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top; /* Makes sure that top of the image will always stay at the top of the div. Center will keep the center of the image always in teh centre. Top and bottom will be cup off with resize. */
     position:relative;
@@ -12,6 +12,14 @@
     -webkit-clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%); /* Make cool cut of header image */
 
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+            (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.8),
+            rgba($color-secondary-dark, 0.8)), 
+             url(../img/hero.jpg);
+    }
     @include respond(phone) { 
         -webkit-clip-path: polygon( 0 0, 100% 0, 100% 85vh, 0 100%);
         clip-path: polygon( 0 0, 100% 0, 100% 85vh, 0 100%); 
