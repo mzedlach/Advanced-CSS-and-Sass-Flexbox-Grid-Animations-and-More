@@ -1,5 +1,5 @@
 .header{
-    height: 95vh;
+    height: 85vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
@@ -9,10 +9,14 @@
     background-position: top; /* Makes sure that top of the image will always stay at the top of the div. Center will keep the center of the image always in teh centre. Top and bottom will be cup off with resize. */
     position:relative;
 
-    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%); /* Make cool cut of header image */
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%); /* Make cool cut of header image */
+        height: 95vh;
+    }
 
     @media (min-resolution: 192dpi) and (min-width: 37.5em),
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //This is for Firefox
             (min-width: 125em) {
         background-image: linear-gradient(
             to right bottom,
