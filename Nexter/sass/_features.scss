@@ -1,4 +1,30 @@
 .features {
-  background-color: $color-grey-light-2;
   grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+  
+  &__icon{
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    //using -1 for the end will NOT work because the second cell is an IMPLICIT grid. -1 only works on explicit columns
+    transform: translateY(-1rem);
+  }
+  &__text{
+    font-size: 1.7rem;
+  }
 }
