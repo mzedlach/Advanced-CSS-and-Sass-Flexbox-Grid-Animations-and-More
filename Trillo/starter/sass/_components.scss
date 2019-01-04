@@ -357,9 +357,9 @@
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
-//-----------------------------------//
+//--------------------------//
 //---------- LIST ----------//
-//-----------------------------------//
+//--------------------------//
 .list {
   list-style: none;
   margin: 3rem 0;
@@ -382,15 +382,18 @@
     margin-right: .7rem;
 
     //Older browsers
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
 
     //Newer browsers - masks
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;
+    @supports (-webkit-mask-image: url()) or (-webkit-mask-image: url()) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      background-size: none;
+    }
   }
 }
 
