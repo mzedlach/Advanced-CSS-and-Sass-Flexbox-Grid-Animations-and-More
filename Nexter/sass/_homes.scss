@@ -3,8 +3,8 @@
   margin: 15rem 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 7rem;
+grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+grid-gap: 7rem;
 }
 
 .home {
@@ -67,10 +67,10 @@
       align-items: center;
 
       svg {
-          fill: $color-primary;
-          height: 2rem;
-          width: 2rem;
-          margin-right: 1rem;
+        fill: $color-primary;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
       }
   }
 
