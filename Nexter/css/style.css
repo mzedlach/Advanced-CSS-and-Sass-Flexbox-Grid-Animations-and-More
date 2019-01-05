@@ -74,7 +74,27 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start/ sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 3px;
+  width: 4.5rem;
+  margin-top: 4rem; }
+  .nav-btn::before, .nav-btn::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 4.5rem; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }
 
 .header {
   background-color: #54483A;
